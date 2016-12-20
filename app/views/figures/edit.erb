@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Figure</title>
+  </head>
+  <body>
+    <form action="/figures/<%= @figure.id %>" method="post">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <label>Figure Name</label>
+      <input type="text" name="figure[name]" id ="figure_name" value="<%= @figure.name %>">
+      <input type="text" name="figure[title_ids]" id="new_title" value="">
+      <input type="text" name="figure[landmark_name]" id="new_landmark" value="">
+      <input type="submit" name="submit" value="Edit Figure">
+    </form>
+  </body>
+</html>
